@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import { CarsFormComponent } from './cars-form/cars-form.component';
-import { CarComponent } from './car/car.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginFormComponent } from './login-form/login-form.component';
 import { FooterComponent } from './footer/footer.component';
@@ -28,8 +26,6 @@ const appRoutes:Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    CarsFormComponent,
-    CarComponent,
     HeaderComponent,
     LoginFormComponent,
     FooterComponent,
