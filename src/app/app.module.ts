@@ -16,6 +16,10 @@ import { HomeComponent } from './home/index';
 import { LoginComponent } from './login/index';
 import { RegisterComponent } from './register/index';
 
+import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeComponent } from './employees/employee/employee.component';
+import { EmployeeListComponent } from './employees/employee-list/employee-list.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -28,7 +32,10 @@ import { RegisterComponent } from './register/index';
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        EmployeesComponent,
+        EmployeeComponent,
+        EmployeeListComponent
     ],
     providers: [
         AuthGuard,
