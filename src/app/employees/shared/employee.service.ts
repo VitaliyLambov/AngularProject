@@ -4,12 +4,13 @@ import { Employee } from './employee.model';
 
 @Injectable()
 export class EmployeeService {
+
   employeeList: AngularFireList<any>;
-  selecterEmployee : Employee = new Employee();
+  selectedEmployee : Employee = new  Employee();
   constructor(private firebase: AngularFireDatabase) { }
 
-  getDate(){
-    this.employeeList = this.firebase.list('employee');
+  getData(){
+    this.employeeList = this.firebase.list('employees');
     return this.employeeList;
   }
 
@@ -18,7 +19,20 @@ export class EmployeeService {
       name: employee.name,
       position: employee.position,
       office: employee.office,
-      salary: employee.salary
+      salary: employee.salary,
+    });
+  }
+
+  updateEmployee(emp : Employee){
+    this.employeeList.update(emp.$key,{
+      name : emp.name,
+      position : emp.position,
+      office : emp.office,
+      salary : emp.salary
     })
+  }
+
+  deleteEmployee($key : string){
+    this.employeeList.remove($key);
   }
 }
