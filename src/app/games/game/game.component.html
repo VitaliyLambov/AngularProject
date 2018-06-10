@@ -1,0 +1,28 @@
+<form #gameForm="ngForm" (ngSubmit)="onSubmit(gameForm)">
+  <input type="hidden" name="$key" #$key="ngModel" [(ngModel)]="gameService.selectedGame.$key">
+<div class="form-group">
+  <label>Name</label>
+  <input class="form-control" name="name" #name="ngModel" [(ngModel)]="gameService.selectedGame.name" placeholder="Full Name" required>
+</div>
+<div class="form-group">
+  <label>Description</label>
+  <input class="form-control" name="description" #description="ngModel" [(ngModel)]="gameService.selectedGame.description" placeholder="Description">
+</div>
+<div class="form-group">
+  <label>Salary</label>
+  <div class="input-group">
+      <div class="input-group-addon">
+        <i class="fa fa-dollar"></i>
+      </div>
+      <input class="form-control" name="salary" #salary="ngModel" [(ngModel)]="gameService.selectedGame.salary" placeholder="Salary">
+  </div>
+</div>
+<div class="form-group">
+  <button class="btn btn-default" type="submit" [disabled]="!gameForm.valid">
+    <i class="fa fa-floppy-o"></i>
+     Submit</button>
+  <button class="btn btn-default" type="button" (click)="resetForm(gameForm)">
+    <i class="fa fa-repeat"></i>
+     Reset</button>
+</div>
+</form>
