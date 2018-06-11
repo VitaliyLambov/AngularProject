@@ -10,7 +10,7 @@ import { GameService } from '../shared/game.service';
 
 export class GameComponent implements OnInit 
 {
-  constructor(private gameService: GameService) { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit() 
   {

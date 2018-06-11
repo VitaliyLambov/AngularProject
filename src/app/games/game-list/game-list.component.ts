@@ -11,7 +11,7 @@ import { Game } from '../shared/game.model';
 export class GameListComponent implements OnInit 
 {
   gameList: Game[];
-  constructor(private gameService: GameService) { }
+  constructor(public gameService: GameService) { }
 
   ngOnInit() 
   {

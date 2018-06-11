@@ -9,7 +9,7 @@ export class GameService
 {
   gameList: AngularFireList<any>;
   selectedGame: Game = new Game();
-  constructor(private firebase :AngularFireDatabase ) { }
+  constructor(public firebase :AngularFireDatabase ) { }
 
   getData()
   {

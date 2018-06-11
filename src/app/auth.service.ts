@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-    constructor(private router: Router){}
+    constructor(public router: Router){}
 
     register(email: string, password: string) {
         firebase.auth()
